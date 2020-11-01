@@ -1,0 +1,602 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500&display=swap");
+/*normalizadores*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header {
+  padding: 3% 0 3% 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  top: 0;
+  z-index: 3;
+  background-color: white;
+}
+
+header img {
+  margin-left: 16px;
+  cursor: help;
+}
+
+header label {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-right: 1rem;
+}
+
+header nav {
+  margin-top: 3%;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
+  line-height: 28px;
+  background-color: #0000ec;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  position: relative;
+  top: 4px;
+  width: 100%;
+  color: white;
+  z-index: 1;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav ul li {
+  margin-bottom: 24px;
+}
+
+header nav ul li:last-child {
+  margin-bottom: 1rem;
+}
+
+header nav ul li a {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+header .fa-times {
+  display: none;
+}
+
+header input[type="checkbox"] {
+  display: none;
+}
+
+header .menu:checked ~ nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .menu:checked ~ label .fa-times {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .menu:checked ~ label .fa-bars {
+  display: none;
+}
+
+body .title {
+  font-size: 2.25rem;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: normal;
+  text-align: start;
+  line-height: 42px;
+}
+
+body p {
+  padding-top: 1rem;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: start;
+  color: #060a24;
+}
+
+body .principal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 12% 5% 0 5%;
+  color: #060a24;
+  position: relative;
+}
+
+body .principal .title {
+  width: 85%;
+}
+
+body .principal .btn {
+  color: #060a24;
+  margin-bottom: 24px;
+}
+
+body .principal .world {
+  text-decoration: line-through;
+}
+
+body .principal .dot {
+  color: #0000ec;
+}
+
+body .btn {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+  text-align: center;
+  line-height: 22px;
+  font-size: 1rem;
+  width: 288px;
+  height: 48px;
+  margin-top: 2.25rem;
+  background-color: #00f3bb;
+}
+
+body .btn:hover {
+  background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+  cursor: pointer;
+}
+
+body .sec-1 {
+  background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+  -webkit-clip-path: polygon(0 3%, 100% 0%, 100% 98%, 0% 100%);
+          clip-path: polygon(0 3%, 100% 0%, 100% 98%, 0% 100%);
+  padding-top: 20%;
+  padding-bottom: 30%;
+}
+
+body .sec-1 .title {
+  padding: 0 1rem;
+  padding-bottom: 6%;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+body .sec-1 .sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 4%;
+}
+
+body .sec-1 .sub .iframe {
+  width: 100%;
+  margin-top: 3%;
+  height: 232px;
+  border: none;
+}
+
+body .sec-2 {
+  padding: 2rem 1rem;
+  color: #060a24;
+  margin-top: -100px;
+  position: relative;
+}
+
+body .sec-2 .title {
+  padding-top: 27px;
+}
+
+body .sec-2 p {
+  padding-top: 8px;
+}
+
+body .sec-2 img {
+  width: 100%;
+}
+
+body .sec-3 {
+  padding-top: 10%;
+}
+
+body .sec-3 .title {
+  padding: 0 0 3% 4%;
+  color: #060a24;
+}
+
+body .sec-3 .images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .sec-3 .images img {
+  width: 100%;
+}
+
+body .widgets {
+  padding-top: 48px;
+  color: #060a24;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "title" "widgets-content";
+}
+
+body .widgets .title {
+  padding: 0 1rem 37px 1rem;
+}
+
+body .widgets .widgets-content {
+  display: -ms-grid;
+  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+      grid-template-areas: "widget-item" "widget-item" "widget-item" "widget-item";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+}
+
+body .widgets .widgets-content .widget-image {
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+body .widgets .widgets-content img {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  padding-bottom: 13px;
+  width: 104px;
+  height: 104px;
+}
+
+body .widgets .widgets-content .widget-description {
+  text-align: center;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 24px;
+  color: #060a24;
+  line-height: 32px;
+  letter-spacing: 0;
+  font-weight: 600;
+  padding-bottom: 65px;
+}
+
+body .widgets .widgets-content .widget-description:last-child {
+  padding-bottom: 42px;
+}
+
+body .sec-4 {
+  background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+  -webkit-clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 100%);
+          clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20% 4%;
+}
+
+body .sec-4 .title {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+body footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 5% 10% 10% 10%;
+}
+
+body footer .foo {
+  margin-bottom: 5%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+  color: #060a24;
+}
+
+body footer .icons {
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  color: #060a24;
+  cursor: pointer;
+}
+
+/*Media query*/
+@media screen and (min-width: 950px) {
+  header {
+    font-size: 1rem;
+    padding: unset;
+  }
+  header img {
+    padding-left: 5%;
+    width: 8%;
+  }
+  header .fas {
+    display: none;
+  }
+  header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: white;
+    color: black;
+    width: unset;
+    padding-right: 5%;
+  }
+  header nav ul li {
+    float: left;
+  }
+  header nav ul li a {
+    font-weight: 400;
+    color: #060a24;
+    padding-left: 3rem;
+  }
+  header nav ul li a:hover {
+    background-color: white;
+    color: #00F3BB;
+    text-decoration: line-through;
+  }
+  header nav ul li a:active {
+    color: rgba(6, 10, 36, 0.56);
+  }
+  body .title {
+    font-size: 4rem;
+    line-height: 84px;
+    width: 100%;
+  }
+  body .btn {
+    width: 226px;
+    height: 56px;
+    font-size: 18px;
+  }
+  body p {
+    font-size: 1rem;
+  }
+  body .principal {
+    padding: 5% 15%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  body .principal .btn {
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    margin-top: 5%;
+  }
+  body .principal .title {
+    width: 100%;
+  }
+  body .sec-1 {
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 20%;
+    -webkit-clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+            clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+  }
+  body .sec-1 .title {
+    padding: 15% 15% 3% 15%;
+    font-size: 3rem;
+  }
+  body .sec-1 .sub {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "iframe iframe" "iframe iframe";
+    gap: 72px;
+  }
+  body .sec-1 .sub .iframe {
+    width: 100%;
+  }
+  body .sec-2 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    padding: 0 12%;
+    margin-top: -150px;
+  }
+  body .sec-2 .title {
+    font-size: 3rem;
+    line-height: 62px;
+    width: 100%;
+  }
+  body .sec-2 p {
+    font-size: 1rem;
+    line-height: 24px;
+    font-weight: 500;
+  }
+  body .sec-2 .image {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1/4;
+  }
+  body .sec-2 .text {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    grid-row: 2/4;
+  }
+  body .sec-2 img {
+    width: 410px;
+  }
+  body .sec-3 {
+    padding-bottom: 4rem;
+  }
+  body .sec-3 .title {
+    padding: 0 15%;
+    font-size: 3rem;
+  }
+  body .sec-3 .images {
+    margin-top: 40px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body .sec-3 .images img {
+    width: 33%;
+    border: unset;
+  }
+  body .widgets {
+    padding: 0 15%;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "title" "widgets-content";
+  }
+  body .widgets .title {
+    font-size: 3rem;
+  }
+  body .widgets .widgets-content {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "widget-item widget-item widget-item widget-item";
+  }
+  body .widgets .widgets-content .widget-item {
+    padding: 10px 22px;
+  }
+  body .widgets .widgets-content .widget-item img {
+    width: 100%;
+  }
+  body .widgets .widgets-content .widget-item .widget-description {
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 0;
+  }
+  body .sec-4 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 20% 0 8% 0;
+    -webkit-clip-path: polygon(0 30%, 100% 0%, 100% 100%, 0 100%);
+            clip-path: polygon(0 30%, 100% 0%, 100% 100%, 0 100%);
+  }
+  body .sec-4 .title {
+    font-size: 3rem;
+    text-align: center;
+  }
+  body .sec-4 .btn {
+    font-size: 18px;
+    width: 345px;
+    height: 56px;
+  }
+  body footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 2% 6%;
+  }
+  body footer .icons {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  body footer .icons i {
+    width: 18px;
+    height: 28px;
+    margin-right: 36px;
+  }
+  body footer .icons i:last-child {
+    margin-right: unset;
+  }
+  body footer .foo {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
